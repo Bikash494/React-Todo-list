@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-todo-list-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: react-todo-list-deployment
+  template:
+    metadata:
+      labels:
+        app: react-todo-list-deployment
+    spec:
+      containers:
+      - name: react-app-container
+        image: dockerbikash/todo-react-web-k8:latest
+        ports:
+        - containerPort: 3000
