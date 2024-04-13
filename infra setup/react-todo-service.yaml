@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-todo-service
+spec:
+  selector:
+    app: react-todo-list-deployment
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 3000

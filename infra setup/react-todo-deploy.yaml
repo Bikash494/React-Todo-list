@@ -13,7 +13,7 @@ spec:
         app: react-todo-list-deployment
     spec:
       containers:
-      - name: react-app-container
-        image: dockerbikash/todo-react-web-k8:latest
-        ports:
-        - containerPort: 3000
+        - name: react-app-container
+          image: dockerbikash/todo-react-web-k8:latest
+          ports:
+          - containerPort: 3000
